@@ -140,21 +140,21 @@ public class CustomCameraActivity extends Activity {
         double screenAspectRatio = screenHeight * 1.0 / screenWidth;
         maskAspectRatio = mask.getDrawable().getIntrinsicHeight() * 1.0 / mask.getDrawable().getIntrinsicWidth();
         if (screenAspectRatio > maskAspectRatio) {
-            layoutParams.topMargin = (int) (screenHeight / 2 - screenWidth * 1.0 * maskAspectRatio / 2);
+            layoutParams.topMargin = (int) (screenHeight / 2 - screenWidth * 0.9 * maskAspectRatio / 2);
             maskLeft = 0.05;
-            maskWidth = 1.0;
+            maskWidth = 0.9;
             maskTop = layoutParams.topMargin*1.0 / screenHeightInPixels();
-            maskHeight = screenWidth*1.0*maskAspectRatio/screenHeightInPixels();
+            maskHeight = screenWidth*0.9*maskAspectRatio/screenHeightInPixels();
         } else {
             layoutParams.topMargin = (int) (screenHeight * 0.05);
-            maskLeft=(screenWidth/2-screenHeight*1.0/maskAspectRatio/2)/screenWidthInPixels();
-            maskWidth=screenHeight*1.0/maskAspectRatio/screenWidthInPixels();
+            maskLeft=(screenWidth/2-screenHeight*0.9/maskAspectRatio/2)/screenWidthInPixels();
+            maskWidth=screenHeight*0.9/maskAspectRatio/screenWidthInPixels();
             maskTop=screenHeight*0.05/screenHeightInPixels();
-            maskHeight=screenHeight*1.0/screenHeightInPixels();
+            maskHeight=screenHeight*0.9/screenHeightInPixels();
         }
         mask.setLayoutParams(layoutParams);
-        mask.setMaxWidth((int) (screenWidth * 1.0));
-        mask.setMaxHeight((int) (screenHeight * 1.0));
+        mask.setMaxWidth((int) (screenWidth * 0.9));
+        mask.setMaxHeight((int) (screenHeight * 0.9));
         mask.setAdjustViewBounds(true);
         layout.addView(mask);
     }
