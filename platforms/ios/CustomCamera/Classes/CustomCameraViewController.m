@@ -86,7 +86,7 @@ static const CGFloat kScale = 0.9f;
     _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [_backButton setBackgroundImage:[UIImage imageNamed:@"www/img/cameraoverlay/back_button.png"] forState:UIControlStateNormal];
     [_backButton setBackgroundImage:[UIImage imageNamed:@"www/img/cameraoverlay/back_button_pressed.png"] forState:UIControlStateHighlighted];
-    [_backButton setTitle:@"Cancel" forState:UIControlStateNormal];
+    [_backButton setTitle:@"" forState:UIControlStateNormal];
     [_backButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [[_backButton titleLabel] setFont:[UIFont systemFontOfSize:18]];
     [_backButton addTarget:self action:@selector(dismissCameraPreview) forControlEvents:UIControlEventTouchUpInside];
